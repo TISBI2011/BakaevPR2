@@ -1,0 +1,25 @@
+﻿<Page x:Class="BakaevPR2.Pages.UserP"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BakaevPR2.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UserP" Background="White">
+
+    <Grid>
+        <DataGrid  IsReadOnly="True" Name = "DishListDG" AutoGenerateColumns="False"  Margin="211,10,10,10"  >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding name}"  Width="150"/>
+                <DataGridTextColumn Header="Type" Binding="{Binding material}"  Width="100"/>
+                <DataGridTextColumn Header="Style" Binding="{Binding style}"  Width="75"/>
+                <DataGridTextColumn Header="Count" Binding="{Binding count}" Width="75"/>
+                <DataGridTextColumn Header="IsStop" Binding="{Binding typeF.nameT}"  Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="AddBTN" Content="Add furniture" HorizontalAlignment="Left" Margin="10,13,0,0" VerticalAlignment="Top" Width="188" Click="AddBTN_Click"/>
+        <Button x:Name="BackBTN" Content="Back" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="188" Click="BackBTN_Click"/>
+
+    </Grid>
+</Page>
